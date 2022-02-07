@@ -8,6 +8,7 @@ Javascript フレームワーク: Vue.js
 データベース: MySQL
 
 **データベース接続情報
+
 ユーザ名: webuser
 
 パスワード: webpass
