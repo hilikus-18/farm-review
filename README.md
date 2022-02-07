@@ -1,29 +1,20 @@
 # farm-review
-**技術スタック
+<strong>**技術スタック</strong>
+- フレームワーク: Laravel
+- Javascript フレームワーク: Vue.js
+- データベース: MySQL
 
-フレームワーク: Laravel
+<strong>**データベース接続情報</strong>
+- ユーザ名: webuser
+- パスワード: webpass
+- データベース名: database
+- ポート: 3306
 
-Javascript フレームワーク: Vue.js
-
-データベース: MySQL
-
-**データベース接続情報
-
-ユーザ名: webuser
-
-パスワード: webpass
-
-データベース名: database
-
-ポート: 3306
-
-起動
-
+### 起動
+```
 $ docker-compose up
-
-終了
-
+```
 ### コンテナの終了
-
+```
 $ docker-compose down
-
+```
