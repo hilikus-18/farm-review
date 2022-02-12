@@ -10,9 +10,28 @@ services:
   db:
     image: mysql:8.0
     ports:
-      - 3306:3306
+      - 13306:3306
     environment:
-      MYSQL_DATABASE: database
+      MYSQL_DATABASE: farm_review
       MYSQL_USER: webuser
       MYSQL_PASSWORD: webpass
       MYSQL_ROOT_PASSWORD: pass
+  farm-phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: farm-phpmyadmin
+    restart: always
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - PMA_USER=root
+      - PMA_PASSWORD=pass
+    links:
+      - db
+    ports:
+      - 8080:80
+    volumes:
+      - /sessions
+  mail:
+    image: mailhog/mailhog
+    ports:
+      - 8025:8025
