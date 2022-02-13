@@ -9,6 +9,8 @@ class Tip extends Model
 {
     use HasFactory;
 
+    protected $table = 'tips';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -17,7 +19,10 @@ class Tip extends Model
     protected $fillable = [
         'title',
         'text',
-        'stats',
+        'status',
+    ];
+
+    protected $guarded = [
         'created_at',
         'updated_at',
     ];
