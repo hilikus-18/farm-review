@@ -15,13 +15,13 @@ class CreateTipsTable extends Migration
     {
         Schema::create('tips', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('harvest_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users')->cascadeOnUpdate()->cascadeOnDelete();
-            $table->foreign('harvest_id')->references('id')->on('harvests')->cascadeOnUpdate()->cascadeOnDelete();
+            // $table->bigInteger('user_id')->unsigned();
+            // $table->bigInteger('harvest_id')->unsigned();
+            // $table->foreign('user_id')->references('id')->on('users')->cascadeOnUpdate()->cascadeOnDelete();
+            // $table->foreign('harvest_id')->references('id')->on('harvests')->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('title');
             $table->text('text');
-            $table->tinyInteger('work_type');
+            // $table->tinyInteger('work_type');
             $table->tinyInteger('status');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
